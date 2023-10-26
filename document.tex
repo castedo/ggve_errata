@@ -1,0 +1,96 @@
+\addbibresource{references.bib}
+
+\newcommand{\mathstop}{\text{\ .}}
+
+\begin{document}
+
+\begin{abstract}
+Errata page for the book
+\emph{Gene genealogies, variation and evolution: a primer in coalescent theory}
+by Jotun Hein, Mikkel H. Schierup, and Carsten Wiuf.
+\end{abstract}
+
+
+\section{Summary}
+
+The following corrections apply to the book
+\emph{Gene genealogies, variation and evolution: a primer in coalescent theory},
+by Jotun Hein, Mikkel H. Schierup, and Carsten Wiuf.
+\cite{hein_gene_2006}.
+
+
+\section{Corrections}
+
+\subsection{Page 30}
+
+\subsubsection{Equation 1.40}
+
+The $(1 - 1/(2 N))$ term should be omitted
+
+\subsubsection{Equation 1.41}
+
+The $\approx$ should be replaced with $=$.
+
+\subsection{Page 153}
+
+\subsubsection{Equation 5.20}
+
+The third sigma should be
+\[
+\sum_{j=2}^i
+\]
+
+\subsubsection{Equation 5.21}
+
+The equation should be
+\[
+E(R_n^3) \approx \left( \log(n) - 1.56 \right) \rho
+\]
+
+
+\section{Proof for Corrections}
+
+\subsection{Page 30}
+
+\subsubsection{Equation 1.40}
+
+From Professor Carsten Wiuf:
+
+In the two sex model, one forms pairs of males and females, so going backwards,
+two genes come from the female population with probability $1/4$ and the male
+with probability $1/4$. If from female population, the two genes have
+probability $1/(2N_f)$ for common ancestor and similar when males. So this
+yields
+
+\[
+\frac{1}{4} \left( \frac{1}{2N_f} + \frac{1}{2N_m} \right) = \frac{1}{8} \frac{N}{N_f N_m}
+\]
+
+\subsection{Page 153}
+
+\subsubsection{Equation 5.21}
+
+From \href{https://doi.org/10.1093/oxfordjournals.molbev.a003733}{A
+Simulation Study of the Reliability of Recombination Detection Methods}
+\cite{wiuf_simulation_2001}:
+\[
+\frac{ E(R_n^3) }{\rho} = \sum_{i=1}^{n-1} \frac{1}{i} - C(n)
+\]
+and
+\[
+C(n) \approx 2.14
+\]
+
+From the well known Euler-Mascheroni constant $\gamma$:
+\[
+\sum_{i=1}^n \frac{1}{i} \approx \log(n) + \gamma \approx \log(n) + 0.577
+\]
+
+Thus
+\[
+E(R_n^3) \approx \left( \log(n) + 0.577 - 2.14 \right) \rho
+\]
+
+
+\printbibliography % used by LaTeX compiler but not pandoc
+\end{document}
